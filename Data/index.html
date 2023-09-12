@@ -11,6 +11,11 @@
           integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 
     <style>
+
+        .container {
+            overflow: auto; /* добавьте скроллинг при необходимости */
+        }
+
         .bd-placeholder-img {
             font-size: 1.125rem;
             text-anchor: middle;
@@ -281,16 +286,153 @@
                                 Email support,
                                 Help center access
                             </p>
-                            <button type="button" class="w-100 btn btn-lg btn-outline-primary">Купить</button>
+                            <button type="button" class="w-100 btn btn-lg btn-outline-dark btn-success">Купить</button>
                         </div>
+                    </div>
+                </div>
+                <div class="col-8 mt-3">
+                    <div class="card mb-4 rounded-3 shadow-sm">
+                        <div class="card-body">
+                            <h4 class="card-title">Оставьте заявку</h4>
+                            <form>
+                                <div class="mb-3">
+                                    <input name="name" type="text" class="form-control" id="exampleInputEmail1"
+                                           placeholder="Имя"
+                                           aria-describedby="emailHelp">
+                                </div>
+                                <div class="mb-3">
+                                    <input name="email" type="email" placeholder="email" class="form-control"
+                                           id="exampleInputPassword1">
+                                </div>
+                                <button type="submit"
+                                        class="btn btn-lg btn-outline-dark btn-success form-control">Отправить
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">FAQ. Ответы на часто задаваемые вопросы.</h5>
+                        </div>
+                        <p class="d-grid gap-2 d-md-block">
+                            <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button"
+                               aria-expanded="false" aria-controls="collapseExample1">
+                                Как купить?
+                            </a>
+                            <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseExample2" aria-expanded="false"
+                                    aria-controls="collapseExample2">
+                                Как доставить?
+                            </button>
+                            <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseExample3" aria-expanded="false"
+                                    aria-controls="collapseExample3">
+                                Какая гарантия?
+                            </button>
+                        </p>
+                        <div class="collapse" id="collapseExample">
+                            <div class="card card-body">
+                                Ответ на вопрос "Как купить?"
+                                Выбираете товар и нажимаете кнопку купить, далее выбираете удобный для вас платежный
+                                метод и совершаете платеж.
+                                Если возникнут вопросы по товару, Вы можете оставить заявку и с вами свяжется менеджер.
+                            </div>
+                        </div>
+                        <div class="collapse" id="collapseExample2">
+                            <div class="card card-body">
+                                Ответ на вопрос "Как доставить?"
+                                После того как заказ успешно обработан, на электронный адрес, указанный для доставки
+                                лицензии, отправляется электронное письмо с лицензионным сертификатом.
+                                В электронном письме с лицензионным сертификатом содержится подробная информация о
+                                заказе и специальная ссылка на портал учетной записи, где вы можете получить доступ к
+                                лицензиям и управлять ими в режиме онлайн.
+                                Вы получите доступ к своей лицензии после принятия лицензионного соглашения на портале.
+                            </div>
+                        </div>
+                        <div class="collapse" id="collapseExample3">
+                            <div class="card card-body">
+                                Ответ на вопрос "Какая гарантия?"
+                                Мы уже 12 лет на рынке и полностью несем ответственность за наш продукт.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 mt-2">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Корзина</h4>
+                        </div>
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th scope="col">Номер</th>
+                                <th scope="col">Название товара</th>
+                                <th scope="col">Цена за штуку</th>
+                                <th scope="col">Количество</th>
+                                <th scope="col">Итоговая сумма</th>
+                                <th scope="col">Статус заказа</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>ТВ-приставка "СмотриКа"</td>
+                                <td>3.999 рублей</td>
+                                <td>1</td>
+                                <td>3999 рублей</td>
+                                <td>
+                                    <div class="alert alert-primary" role="alert">
+                                        <small>новый</small>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>HDMI кабель 1 м</td>
+                                <td>599 рублей</td>
+                                <td>2</td>
+                                <td>1198 рублей</td>
+                                <td>
+                                    <div class="alert alert-warning" role="alert">
+                                        <small>обработка</small>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Товар 1 подписка на 1 месяц</td>
+                                <td>299 рублей</td>
+                                <td>1</td>
+                                <td>299 рублей</td>
+                                <td>
+                                    <div class="alert alert-danger" role="alert">
+                                        <small>отмена</small>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">4</th>
+                                <td>Телевизор ХуяньПроГэлакси120кСуперХД</td>
+                                <td>189.999 рублей</td>
+                                <td>1</td>
+                                <td>189.999 рублей</td>
+                                <td>
+                                    <div class="alert alert-success" role="alert">
+                                        <small>обработан</small>
+                                    </div>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
         </main>
-
     </div>
-
 </main>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
         crossorigin="anonymous"></script>
